@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
 // Static files (frontend)
 app.use(express.static(path.join(__dirname, 'public')));
 
