@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
 
-const DB_PATH = path.join(__dirname, 'joyeria.db');
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'joyeria.db');
 let db = null;
 
 async function initDB() {

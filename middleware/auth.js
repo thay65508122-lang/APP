@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const SECRET = process.env.JWT_SECRET || 'JoyeriaSecretKey2024';
+const SECRET = process.env.JWT_SECRET || 'joyeria_dev_key_2024';
 
 function generateToken(user) {
   return jwt.sign(
